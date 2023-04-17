@@ -1,0 +1,35 @@
+package com.testng;
+
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+public class Test2 {
+	
+	@BeforeClass
+	public void BeforeClassTest2() {
+		System.out.println("Before class - Test2");
+	}
+	
+	@Test(priority=2)
+	public void Test2M1() {
+		System.out.println("First method in Test2");
+	}
+	
+	@Test(priority=1)
+	public void Test2M2() {
+		System.out.println("Second method in Test2");
+	}
+
+	
+	@Test(enabled = false)  //to disable the test case
+	public void Test2M3() {
+		System.out.println("Third method in Test2");
+	}
+
+	@AfterClass
+	public void AfterClassTest2() {
+		System.out.println("After class - Test2");
+	}
+
+}

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Default test" tests="3" started="3" failures="0" errors="0" ignored="0">
+  <testsuite name="Default test" time="0.05">
+    <testcase name="LoginTest" classname="com.testng.Test1" time="0.008"/>
+    <testcase name="LogoutTest" classname="com.testng.Test1" time="0.001"/>
+    <testcase name="CloseTest" classname="com.testng.Test1" time="0.002"/>
+  </testsuite>
+</testrun>

@@ -1,0 +1,8 @@
+package com.ListenersTests;
+
+import org.testng.annotations.Listeners;
+
+@Listeners(ApplyListeners.class)
+public class TestClass {
+
+}

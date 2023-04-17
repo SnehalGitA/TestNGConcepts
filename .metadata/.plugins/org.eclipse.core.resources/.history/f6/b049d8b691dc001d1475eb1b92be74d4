@@ -1,0 +1,29 @@
+package com.grouping;
+
+public class Grouping {
+	
+	public void T1() {
+		System.out.println("T1");
+	}
+	
+	public void T2() {
+		System.out.println("T2");
+	}
+	
+	public void T3() {
+		System.out.println("T3");
+	}
+	
+	public void T4() {
+		System.out.println("T4");
+	}
+	
+	public void T5() {
+		System.out.println("T5");
+	}
+	
+	public void T6() {
+		System.out.println("T6");
+	}
+
+}

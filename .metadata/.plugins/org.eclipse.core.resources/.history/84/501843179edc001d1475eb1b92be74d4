@@ -1,0 +1,45 @@
+package com.paramerization;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
+
+public class ParamerizationTest {
+	
+WebDriver driver;
+	
+	@BeforeClass
+	@Parameters({"browser","url"})
+	public void SetUp(String BrowserName, String AppUrl) throws Throwable {
+		if(BrowserName.equalsIgnoreCase("chrome")) {
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\snpawar\\OneDrive - Capgemini\\Documents\\SeleniumProject\\ChromeDriver\\chromedriver.exe");
+		driver = new ChromeDriver();
+		}else if (BrowserName.equalsIgnoreCase("Edge")) {
+			System.setProperty("webdriver.edge.driver", "C:\\Users\\snpawar\\OneDrive - Capgemini\\Documents\\SeleniumProject\\ChromeDriver\\chromedriver.exe");
+			driver = new EdgeDriver();	
+		}
+		
+		driver.get(AppUrl);
+		driver.manage().window().maximize();
+		Thread.sleep(1000);
+	}
+	
+	@Test
+	public void ValidateTitle() {
+		
+		String s = driver.getTitle();
+		
+		System.out.println(s);
+	}
+	
+	@AfterClass
+	public void Close() {
+		driver.quit();
+	}
+
+}

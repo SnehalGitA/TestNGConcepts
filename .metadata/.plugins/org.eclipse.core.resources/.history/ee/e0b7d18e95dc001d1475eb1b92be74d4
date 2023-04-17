@@ -1,0 +1,10 @@
+package com.assertions;
+
+import org.openqa.selenium.WebDriver;
+
+public class AssertionTests {
+	
+	WebDriver driver;
+	
+
+}
